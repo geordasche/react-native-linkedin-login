@@ -84,9 +84,8 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
     public void init(final String accessToken, final String expiresOn)
     {
 
-        Activity activity = getCurrentActivity();
         Log.d(TAG, "init");
-        activity.runOnUiThread(new Runnable() {
+        getCurrentActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
 

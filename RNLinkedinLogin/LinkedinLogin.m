@@ -21,7 +21,12 @@
 // SOFTWARE.
 
 #import "LinkedinLogin.h"
-#import <React/RCTEventDispatcher.h>
+#if __has_include(<React/RCTEventDispatcher.h>)
+ #import <React/RCTEventDispatcher.h>
+#else
+ #import "RCTEventDispatcher.h"
+#endif
+
 
 #import "LIALinkedInApplication.h"
 #import "LIALinkedInHttpClient.h"

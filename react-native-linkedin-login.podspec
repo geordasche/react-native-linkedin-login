@@ -17,6 +17,8 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'linkedin-sdk.framework'
   s.requires_arc = true
 
+  s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(SRCROOT)/../../node_modules/react-native/React/**' }
+
   s.dependency 'AFNetworking', '>= 2.6.3'
   s.dependency 'IOSLinkedInAPIFix', '>= 2.0.4'
 
